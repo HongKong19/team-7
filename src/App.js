@@ -23,7 +23,7 @@ function App() {
     
     <BrowserRouter>
     
-      <Link to={'/home'}>go to site</Link>
+      <Link to={'/home'}>HIA Home</Link>
 
       <Switch>
         <Route path = '/home' component={Home}/>

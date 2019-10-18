@@ -8,15 +8,13 @@ function createData(time, amount) {
 }
 
 const data = [
-  createData('10 yr', 0),
-  createData('15 yr', 300),
-  createData('20 yr', 600),
-  createData('25 yr', 800),
-  createData('30 yr', 1500),
-  createData('35 yr', 2000),
-  createData('40 yr', 2400),
-  createData('45 yr', 2400),
-  createData('50 yr', undefined),
+  createData('Day 1', 0),
+  createData('Day 2', 26),
+  createData('Day 3', 35),
+  createData('Day 4', 43),
+  createData('Day 5', 55),
+  createData('Day 6', 60),
+  createData('Day 7', 75),
 ];
 
 export default function Chart() {
@@ -36,7 +34,7 @@ export default function Chart() {
           <XAxis dataKey="time" />
           <YAxis>
             <Label angle={270} position="left" style={{ textAnchor: 'middle' }}>
-              Overall Progress (%)
+              % of goal completed
             </Label>
           </YAxis>
           <Line type="monotone" dataKey="amount" stroke="#556CD6" dot={false} />
