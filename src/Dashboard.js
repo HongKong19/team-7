@@ -1,19 +1,39 @@
 import React from 'react';
-import { Table } from 'reactstrap';
-import PropTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AppBar from '@material-ui/core/AppBar';
+import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Drawer from '@material-ui/core/Drawer';
+import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
-
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import clsx from 'clsx';
+import { mainListItems} from './listItems';
+import Chart from './Chart';
+import Deposits from './Deposits';
+import Orders from './Orders';
 
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const drawerWidth = 240;
 
@@ -40,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   },
   appBarShift: {
     marginLeft: drawerWidth,
-    width: `calc(100%)`,
+    width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -96,36 +116,20 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-
-Table.propTypes = {
-    // Pass in a Component to override default element
-    tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-    size: PropTypes.string,
-    bordered: PropTypes.bool,
-    borderless: PropTypes.bool,
-    striped: PropTypes.bool,
-    dark: PropTypes.bool,
-    hover: PropTypes.bool,
-    responsive: PropTypes.bool,
-    // Custom ref handler that will be assigned to the "ref" of the inner <table> element
-    innerRef: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.string,
-      PropTypes.object
-    ])
-    };
-
-const Example = (props) => {
+export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
-
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <div>
-    <CssBaseline />
+    <div className={classes.root}>
+      <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -138,7 +142,7 @@ const Example = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Medicine Tracker
+            Dashboard
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -147,45 +151,48 @@ const Example = (props) => {
           </IconButton>
         </Toolbar>
       </AppBar>
-    <br></br>
-    <br></br>
-    <br></br>
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th> </th>
-          <th>Medicine Name</th>
-          <th>Frequency</th>
-          <th>Timing</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark Otto</td>
-          <td>2 times</td>
-          <td>Morning, Night</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Rose Otto</td>
-          <td>1 time</td>
-          <td>Morning</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry Otto</td>
-          <td>4 times</td>
-          <td>Every 6 hours</td>
-        </tr>
-      </tbody>
-     
-    </Table>
+      <Drawer
+        variant="permanent"
+        classes={{
+          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+        }}
+        open={open}
+      >
+        <div className={classes.toolbarIcon}>
+          <IconButton onClick={handleDrawerClose}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </div>
+        <Divider />
+        <List>{mainListItems}</List>
+        <Divider />
+      </Drawer>
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+          <Grid container spacing={3}>
+            {/* Chart */}
+            <Grid item xs={12} md={8} lg={9}>
+              <Paper className={fixedHeightPaper}>
+                <Chart />
+              </Paper>
+            </Grid>
+            {/* Recent Deposits */}
+            <Grid item xs={12} md={4} lg={3}>
+              <Paper className={fixedHeightPaper}>
+                <Deposits />
+              </Paper>
+            </Grid>
+            {/* Recent Orders */}
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <Orders />
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+        <Copyright />
+      </main>
     </div>
   );
-
-  
- 
 }
-
-export default Example;
