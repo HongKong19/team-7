@@ -182,6 +182,7 @@ const Example = (props) => {
       </tbody>
      
     </Table>
+    </Table>
     </div>
   );
 

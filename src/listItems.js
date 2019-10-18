@@ -29,12 +29,14 @@ export const mainListItems = (
         <ListItemText primary="Diet Plan" />
         </ListItem>
     
+    <Link to ='/personal_goals'>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
       <ListItemText primary="Personal Goal" />
     </ListItem>
+    </Link>
     <Link to= {'/tracker'}>
     <ListItem button>
       <ListItemIcon>
