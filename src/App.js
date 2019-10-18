@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 import Copyright from './copyright';
 import Tracker from './components/Tracker';
 import FamilyMember from './components/FamilyMember';
+import Family from './components/Families';
 
 function App() {
   return (
@@ -12,12 +13,14 @@ function App() {
 
       <Link to={'/contact'}>go to login</Link> <br></br>
       <Link to={'/tracker'}>go to track</Link> <br></br>
-      <Link to={'/familyMember'}>go to family member</Link>
+      <Link to={'/familyMember'}>go to family member</Link> <br></br>
+      <Link to={'/family'}>go to family</Link> <br></br>
 
       <Switch>
         <Route path='/contact' component={Copyright}/> 
         <Route path='/tracker' component={Tracker}/> 
         <Route path='/familyMember' component={FamilyMember}/> 
+        <Route path='/family' component={Family}/> 
       </Switch>
     </BrowserRouter>
     </div>
