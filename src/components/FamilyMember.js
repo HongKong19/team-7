@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'reactstrap';
+import { Table, Button } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 Table.propTypes = {
@@ -45,6 +45,10 @@ const Example = (props) => {
         </tr>
       </tbody>
     </Table>
+
+    <Link to= '/'> 
+      <Button>Statistics</Button>
+    </Link>
   </div>
   );
 
