@@ -21,14 +21,14 @@ export const mainListItems = (
         <ListItemText primary="Dashboard" />
         </ListItem>
     </Link>
-    
+    <Link to ='/diet_plan'>
         <ListItem button>
         <ListItemIcon>
             <ShoppingCartIcon />
         </ListItemIcon>
         <ListItemText primary="Diet Plan" />
         </ListItem>
-    
+        </Link>
     <Link to ='/personal_goals'>
     <ListItem button>
       <ListItemIcon>

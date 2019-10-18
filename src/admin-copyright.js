@@ -91,7 +91,7 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Link to='/dashboard'>
+          <Link to='/family'>
           <Button
             fullWidth
             variant="contained"

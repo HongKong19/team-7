@@ -24,16 +24,6 @@ function App() {
     <BrowserRouter>
     
       <Link to={'/home'}>go to site</Link>
-      <Link to={'/login'}>go to login</Link>
-      <Link to={'/dashboard'}>go to navbar</Link>
-      <Link to={'/contact'}>go to login</Link> <br></br>
-      <Link to={'/tracker'}>go to track</Link> <br></br>
-      <Link to={'/familyMember'}>go to family member</Link> <br></br>
-      <Link to={'/family'}>go to family</Link> <br></br>
-      <Link to={'/forum'}>go to forum</Link> <br></br>
-      <Link to={'/forumExample'}>go to forum example</Link> <br></br>
-      <Link to={"/personal_goals"}>go to personal goals </Link>
-      <Link to={"/diet_plan"}>go to diet plan</Link>
 
       <Switch>
         <Route path = '/home' component={Home}/>
