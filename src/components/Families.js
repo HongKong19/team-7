@@ -29,7 +29,7 @@ const divStyle = {
 
 const Example = (props) => {
   return (
-    <div >
+    <div style={{margin:'50px'}}>
      <Link to= '/familyMember'>  
      <Button variant="primary" size="lg" block>Otto's Family</Button> </Link>
       <br></br>

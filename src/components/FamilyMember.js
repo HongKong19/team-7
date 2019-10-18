@@ -23,7 +23,7 @@ Table.propTypes = {
 const Example = (props) => {
   return (
 
-  <div style={{marginLeft:'50px',marginRight:'50px'}}>
+  <div style={{margin:'50px'}}>
     <Table dark>
       <thead>
         <tr>
