@@ -5,6 +5,7 @@ import Copyright from './copyright';
 import Dashboard from './Dashboard';
 import PersonalGoals from "./PersonalGoals";
 import FamilyMember from './components/FamilyMember';
+import Tracker from './components/Tracker';
 import Home from './Home';
 import AdminLogin from './admin-copyright';
 
