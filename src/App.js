@@ -8,6 +8,7 @@ import FamilyMember from './components/FamilyMember';
 import Tracker from './components/Tracker';
 import Family from './components/Families';
 import Forum from './components/Forum';
+import Database from './components/Database';
 import ForumExample from './components/ForumExample'
 import Home from './Home';
 import AdminLogin from './admin-copyright';
@@ -30,6 +31,7 @@ function App() {
       <Link to={'/tracker'}>go to track</Link> <br></br>
       <Link to={'/familyMember'}>go to family member</Link> <br></br>
       <Link to={'/family'}>go to family</Link> <br></br>
+      <Link to={'/database'}>go to database</Link> <br></br>
       <Link to={'/forum'}>go to forum</Link> <br></br>
       <Link to={'/forumExample'}>go to forum example</Link> <br></br>
       <Link to={"/personal_goals"}>go to personal goals </Link>
@@ -45,6 +47,7 @@ function App() {
         <Route path='/tracker' component={Tracker}/> 
         <Route path='/familyMember' component={FamilyMember}/> 
         <Route path='/family' component={Family}/>
+        <Route path='/database' component={Database}/>
         <Route path='/forum' component={Forum}/> 
         <Route path='/forumExample' component={ForumExample}/> 
         <Route path="/personal_goals" component={PersonalGoals} />
