@@ -21,36 +21,20 @@ Table.propTypes = {
     ])
     };
 
+const divStyle = {
+  width: '80%',
+  height: '80%', 
+  fontSize: '15%'
+};
+
 const Example = (props) => {
   return (
-
-  <div style={{margin:'50px'}}>
-    <Table dark>
-      <thead>
-        <tr>
-          <th colspan="2">Otto&#39;s Family</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row" style={{flex:0.1}}>1</th>
-          <td>Mark Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Rose Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry Otto</td>
-        </tr>
-      </tbody>
-    </Table>
-
-    <Link to= '/'> 
-      <Button>Statistics</Button>
-    </Link>
-  </div>
+    <div style={{margin:'50px'}}>
+     <Link to= '/familyMember'>  
+     <Button variant="primary" size="lg" block>Otto's Family</Button> </Link>
+      <br></br>
+      <Button variant="primary" size="lg" block>Wai's Family</Button>
+    </div>
   );
 
   
