@@ -36,7 +36,7 @@ const Example = (props) => {
       <tbody>
         <tr>
           <Link to='/forumExample'>
-            <td style={{color:'white'}}>Best place to work out in Quarry Bay?</td>
+            <td style={{color:'white'}}>Anyone wanna swim tgt?</td>
           </Link>
           <td>Mark Otto</td>
           <td>3 mins ago</td>
