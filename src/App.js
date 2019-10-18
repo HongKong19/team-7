@@ -20,7 +20,6 @@ function App() {
     <div className="App">
 
     
-
     <BrowserRouter>
     
       <Link to={'/home'}>go to site</Link>
