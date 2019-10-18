@@ -47,7 +47,7 @@ const Example = (props) => {
       </tbody>
     </Table>
 
-    <Link to= '/'> 
+    <Link to= '/database'> 
       <Button>Statistics</Button>
     </Link>
   </div>
