@@ -23,8 +23,8 @@ Table.propTypes = {
 const Example = (props) => {
   return (
 
-
-    <Table dark style={{margin:10}}>
+  <div style={{marginLeft:'50px',marginRight:'50px'}}>
+    <Table dark>
       <thead>
         <tr>
           <th colspan="2">Otto&#39;s Family</th>
@@ -45,6 +45,7 @@ const Example = (props) => {
         </tr>
       </tbody>
     </Table>
+  </div>
   );
 
   
