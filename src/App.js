@@ -7,6 +7,8 @@ import Tracker from './components/Tracker'
 import PersonalGoals from "./PersonalGoals";
 import FamilyMember from './components/FamilyMember';
 
+import DietPlan from "./DietPlan";
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,8 @@ function App() {
       <Link to={'/tracker'}>go to track</Link> <br></br>
       <Link to={'/familyMember'}>go to family member</Link>
       <Link to={"/personal_goals"}>go to personal goals </Link>
+      <Link to={"/diet_plan"}>go to diet plan</Link>
+
 
       <Switch>
         <Route path='/login' component={Copyright}/> 
@@ -26,8 +30,9 @@ function App() {
         <Route path='/tracker' component={Tracker}/> 
         <Route path='/familyMember' component={FamilyMember}/> 
         <Route path="/personal_goals" component={PersonalGoals} />
+        <Route path="/diet_plan" component={DietPlan} /> 
       </Switch>
-       
+    
     </BrowserRouter>
     </div>
   );
