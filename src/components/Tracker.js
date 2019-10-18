@@ -124,8 +124,8 @@ const Example = (props) => {
 
 
   return (
-    <div>
-    <CssBaseline />
+      <div>
+        <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -181,6 +181,7 @@ const Example = (props) => {
         </tr>
       </tbody>
      
+    </Table>
     </Table>
     </div>
   );

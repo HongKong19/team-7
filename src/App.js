@@ -5,7 +5,6 @@ import Copyright from './copyright';
 import Dashboard from './Dashboard';
 import Tracker from './components/Tracker'
 import PersonalGoals from "./PersonalGoals";
-import Tracker from './components/Tracker';
 import FamilyMember from './components/FamilyMember';
 
 function App() {
