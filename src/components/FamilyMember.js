@@ -22,7 +22,9 @@ Table.propTypes = {
 
 const Example = (props) => {
   return (
-    <Table dark>
+
+
+    <Table dark style={{margin:10}}>
       <thead>
         <tr>
           <th colspan="2">Otto&#39;s Family</th>
@@ -30,7 +32,7 @@ const Example = (props) => {
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
+          <th scope="row" style={{flex:0.1}}>1</th>
           <td>Mark Otto</td>
         </tr>
         <tr>
