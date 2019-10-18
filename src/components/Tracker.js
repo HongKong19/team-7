@@ -151,6 +151,7 @@ const Example = (props) => {
     <br></br>
     <br></br>
     <Table striped bordered hover>
+    <Table dark>
       <thead>
         <tr>
           <th> </th>
