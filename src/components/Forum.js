@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Button } from 'reactstrap';
+import { Table } from 'reactstrap';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom'
 
@@ -23,33 +23,40 @@ Table.propTypes = {
 
 const Example = (props) => {
   return (
-
   <div style={{margin:'50px'}}>
     <Table dark>
       <thead>
         <tr>
-          <th colspan="2">Otto&#39;s Family</th>
+          <th>Title</th>
+          <th>Posted by</th>
+          <th>Last Replied</th>
+          <th>Category</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row" style={{flex:0.1}}>1</th>
-          <td>Mark Otto</td>
+          <Link to='/forumExample'>
+            <td style={{color:'white'}}>Anyone wanna swim tgt?</td>
+          </Link>
+          <td>John Chan</td>
+          <td>3 mins ago</td>
+          <td>Exercise</td>
+        </tr>
+        
+        <tr>
+          <td>My fav vegetarian dish! (recipe inside)</td>
+          <td>Eric Wai</td>
+          <td>10 mins ago</td>
+          <td>Diet</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Rose Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
+          <td>How I get rid of high blood pressure</td>
           <td>Larry Otto</td>
+          <td>1 hr ago</td>
+          <td>Stories</td>
         </tr>
       </tbody>
     </Table>
-
-    <Link to= '/'> 
-      <Button>Statistics</Button>
-    </Link>
   </div>
   );
 

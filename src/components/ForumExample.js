@@ -21,36 +21,31 @@ Table.propTypes = {
     ])
     };
 
+const divStyle = {
+  width: '80%',
+  height: '80%', 
+  fontSize: '15%'
+};
+
 const Example = (props) => {
   return (
-
-  <div style={{margin:'50px'}}>
-    <Table dark>
-      <thead>
-        <tr>
-          <th colspan="2">Otto&#39;s Family</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row" style={{flex:0.1}}>1</th>
-          <td>Mark Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Rose Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry Otto</td>
-        </tr>
-      </tbody>
-    </Table>
-
-    <Link to= '/'> 
-      <Button>Statistics</Button>
-    </Link>
-  </div>
+    <div style={{margin:'50px'}}>
+        <Table dark>
+            <thead>
+                <tr>
+                    <td scope="row" style={{flex:0.1}}>John</td>
+                    <td>Gonna swim this night at 8. Anyone want to join?<br></br><br></br><br></br></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>You</td>
+                    <td><input type="text" name="name" style= {{width:"80%",height:"150px"}}/><br></br>
+                    <Button>Submit</Button></td>
+                </tr>
+            </tbody>
+        </Table>
+    </div>
   );
 
   
